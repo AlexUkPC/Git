@@ -11,11 +11,11 @@
         <header><h1>Git Config</h1></header>
         <h3>In Git Bash</h3>
         <article>
-            <p>git config --global user.name "Alex Rogna"</p>
+            <p>git config --global user.name "<strong>Alex Rogna</strong>"</p>
             <aside>Setup name</aside>
         </article>
         <article>
-            <p>git config --global user.email alexrogna@yahoo.com</p>
+            <p>git config --global user.email <strong>alexrogna@yahoo.com</strong></p>
             <aside>Setup email</aside>
         </article>
         <article>
@@ -44,6 +44,188 @@
         <article>
             <p>git config --global -e</p>
             <aside>add $LOCAL $REMOTE on the last row if they are not there</aside>
+        </article>
+    </section>
+    <section>
+        <header><h1>Git Commands</h1></header>
+        <article>
+            <p>mkdir <strong>Moon</strong></p>
+            <aside>create a directory name Moon</aside>
+        </article>
+        <article>
+            <p>cd <strong>Moon</strong></p>
+            <aside>enter the directory Moon</aside>
+        </article>
+        <article>
+            <p>git init</p>
+            <aside>initialize git in directory</aside>
+        </article>
+        <article>
+            <p>ls</p>
+            <aside>list files in directory</aside>
+        </article>
+        <article>
+            <p>ls -a</p>
+            <aside>list all files in directory</aside>
+        </article>
+        <article>
+            <p>echo <strong>helllo</strong> > <strong>file1.txt</strong></p>
+            <aside>create a file named file1.txt with text hello inside it</aside>
+        </article>
+        <article>
+            <p>git status</p>
+            <aside>check the status of files in directory</aside>
+        </article>
+        <article>
+            <p>git add <strong>file1.txt</strong> <strong>file2.txt</strong></p>
+            <aside>add file1.txt and file2.txt in staging area</aside>
+        </article>
+        <article>
+            <p>git add <strong>*.txt</strong></p>
+            <aside>add all txt files in staging area</aside>
+        </article>
+        <article>
+            <p>git add <strong>.</strong></p>
+            <aside>add all files in staging area</aside>
+        </article>
+        <article>
+            <p>echo <strong>world</strong> >> <strong>file1.txt</strong></p>
+            <aside>append word world in file1.txt</aside>
+        </article>
+        <article>
+            <p>git commit</p>
+            <aside>commit the changes with a long description</aside>
+        </article>
+        <article>
+            <p>git commit -m "<strong>Initial commit</strong>"</p>
+            <aside>commit the changes with a short description</aside>
+        </article>
+        <article>
+            <p>rm <strong>file2.txt</strong></p>
+            <aside>remove file2.txt from working directory</aside>
+        </article>
+        <article>
+            <p>git ls-files</p>
+            <aside>list files in staging area</aside>
+        </article>
+        <article>
+            <p>git rm <strong>file2.txt</strong></p>
+            <aside>remove files from both working and staging area in the same time</aside>
+        </article>
+        <article>
+            <p>echo <strong>logs/</strong> > <strong>.gitignore</strong></p>
+            <aside>create a file .gitignore with a list of files and folder git should ignore when commit</aside>
+        </article>
+        <article>
+            <p>git rm --cached -r <strong>bin/</strong></p>
+            <aside>remove a directory from staging area if we commited and after we added it to .gitignore</aside>
+        </article>
+        <p>=== premade .gitignore file for diffrent programming language : github.com/github/gitignore ===</p>
+        <article>
+            <p>git status -s</p>
+            <aside>short version of satus</aside>
+        </article>
+        <article>
+            <p>git diff --staged</p>
+            <aside>show what are the differences that we have in the staging area that are going in the next commit</aside>
+        </article>
+        <article>
+            <p>git diff</p>
+            <aside>show what are the differences that we have in the working area that are not yet in staged</aside>
+        </article>
+        <article>
+            <p>!!!next 2 lines works only if Visual Studio Code is setup as diff tool before - see Git Config section for more details</p>
+            <article>
+                <p>git difftool --staged</p>
+                <aside>show in Visual Studio Code what are the differences that we have in the staging area that are going in the next commit</aside>
+            </article>
+            <article>
+                <p>git difftool</p>
+                <aside>show in Visual Studio Code what are the differences that we have in the working area that are not yet staged</aside>
+            </article>
+        </article>
+        <article>
+            <p>git log</p>
+            <aside>show history</aside>
+        </article>
+        <article>
+            <p>git log --oneline</p>
+            <aside>short history</aside>
+        </article>
+        <article>
+            <p>git log --oneline --reverse</p>
+            <aside>short history in reverse</aside>
+        </article>
+        <article>
+            <p>git show <strong>5954c95</strong></p>
+            <aside>show the commit with id 5954c95</aside>
+        </article>
+        <article>
+            <p>git show HEAD~<strong>1</strong></p>
+            <aside>show the commit with number 1 from HEAD</aside>
+        </article>
+        <article>
+            <p>git show HEAD~<strong>1</strong> : <strong>.gitignore</strong></p>
+            <aside>show only what was commited for the file after the colon</aside>
+        </article>
+        <article>
+            <p>git ls-tree HEAD~<strong>1</strong></p>
+            <aside>show commit with number 1 from HEAD as tree</aside>
+        </article>
+        <article>
+            <p>git restore --staged <strong>file1.js</strong></p>
+            <aside>remove file1.js from staging area</aside>
+        </article>
+        <article>
+            <p>git restore <strong>file1.js</strong></p>
+            <aside>restore file in working directory(undo local changes)</aside>
+        </article>
+        <article>
+            <p>git restore <strong>.</strong></p>
+            <aside>restore all files in working directory except for the new created ones which are not yet tracked so git doesn't know about them</aside>
+        </article>
+        <article>
+            <p>git clean -fd</p>
+            <aside>restore all files in working directory</aside>
+        </article>
+        <article>
+            <p>git restore --source=HEAD~<strong>1</strong> <strong>file1.js</strong></p>
+            <aside>resore file1.js to a previous version</aside>
+        </article>
+        <article>
+            <p>touch <strong>file2.html</strong></p>
+            <aside>create file2.html</aside>
+        </article>
+        <article>
+            <p>git branch <strong>login</strong></p>
+            <aside>create login branch</aside>
+        </article>
+        <article>
+            <p>git checkout <strong>login</strong></p>
+            <aside>switch to login branch</aside>
+        </article>
+        <article>
+            <p>git merge <strong>login</strong></p>
+            <aside>merge login branch to main</aside>
+        </article>
+    </section>
+    <section>
+        <header><h1>GitHub</h1></header>
+        <article>
+            <p>git remote add origin <strong>http://github.com/...</strong></p>
+            <aside>select location on github to upload</aside>
+        </article>
+        <article>
+            <p>git push -u origin <strong>main</strong></p>
+            <aside>upload to github the main branch</aside>
+        </article>
+        <article>
+            <p>git pull</p>
+            <aside>download from github</aside>
+        </article>
+        <article>
+            <p>git clone <strong>http://github.com/...</strong></p>
+            <aside>clone a repository from github</aside>
         </article>
     </section>
 </body>
