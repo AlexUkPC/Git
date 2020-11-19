@@ -8,12 +8,43 @@
 </head>
 <body>
     <section>
-        <header>Git Config</header>
+        <header><h1>Git Config</h1></header>
+        <h3>In Git Bash</h3>
         <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Bonum incolumis acies: misera caecitas. Nam ante Aristippus, et ille melius. Sed haec quidem liberius ab eo dicuntur et saepius. Memini vero, inquam; Duo Reges: constructio interrete. Tu quidem reddes;</p>
-            <aside>Tollenda est atque extrahenda radicitus. Quibusnam praeteritis? Ita prorsus, inquam; Est, ut dicis, inquit; Prodest, inquit, mihi eo esse animo. Respondeat totidem verbis. </aside>
+            <p>git config --global user.name "Alex Rogna"</p>
+            <aside>Setup name</aside>
         </article>
-        
+        <article>
+            <p>git config --global user.email alexrogna@yahoo.com</p>
+            <aside>Setup email</aside>
+        </article>
+        <article>
+            <p>code</p>
+            <aside>Test if Visual Studio Code can start from gitbash</aside>
+        </article>
+        <article>
+            <p>git config --global core.editor "code --wait"</p>
+            <aside>Setup Visual Studio Code as core editor</aside>
+        </article>
+        <article>
+            <p>git config --global -e</p>
+            <aside>open the config file for Git in Visual Studio Code</aside>
+        </article>
+        <article>
+            <p>git config --global core.autocrlf true</p>
+            <aside>Auto delelete or add end of lines so it works on any OS(windows true/linux macOS input</aside>
+        </article>
+        <h4>Setup Visual Studio Code as diff tool for Git</h4>
+        <article>
+            <p>git config --global diff.tool vscode</p>
+        </article>
+        <article>
+            <p>git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"</p>
+        </article>
+        <article>
+            <p>git config --global -e</p>
+            <aside>add $LOCAL $REMOTE on the last row if they are not there</aside>
+        </article>
     </section>
 </body>
 </html>
